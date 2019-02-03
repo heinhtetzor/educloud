@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+.content {
+    margin-top: 120px;
+}
+.movie-add-content{
+    margin-top: 120px;
+    padding: 50px;
+}
+
+
+.loginPanel {
+    margin-top: 150px;
+    padding-bottom: 250px;
+    font-family: 'Prompt', sans-serif;
+}
+.form-control{
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #555;
+}
+.form-control:active {
+    border-bottom: 1px solid rgb(6, 196, 22);
+}
+
+.slideNav {
+    width: 200px;
+    height: 100%;
+    display: block;
+    float: left;
+    position: fixed;
+}
+.slide-brand {
+    font-family: 'Niramit', sans-serif;
+    font-size: 20px;
+}
+.slideNav i {
+    padding-right: 10px;
+}
+.active {
+    background-color: #555;
+    color: #000;
+}
+.slideNav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.slideNav a:hover > .logout {
+    background-color: #555;
+    color: #000;
+}
+.dashboard {
+    float: left;
+    padding: 20px;
+}
+.dashboard-panel {
+    margin-left: 200px;
+}
+@media screen and (max-width: 700px) {
+    .slideNav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .slideNav a {float: left;}
+    div.dashboard-panel {
+        margin-left: 0;
+    }
+
+    .logout {
+        width: auto;
+    }
+    .logout a {
+        float: left;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .slideNav a {
+      text-align: left;
+      float: none;
+    }
+  }
+
+.footer {
+    padding: 50px;
+}
+.social-navbar a {
+    padding-bottom: 10px;
+}
+.social-links i {
+    padding-right: 20px;
+    font-size: 25px;
+}
+.social-links a {
+    color: rgb(233, 107, 3);
+}
+.contact-links a {
+    padding-right: 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}   
+.footer section {
+    padding-bottom: 20px;
+}
+
+.webControlPanel {
+    background-color: #ccc;
+    height: 1000px;
+}
+.panel-console {
+    margin-top: 20px;
+}
+.label-member {
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    padding: 20px;
+}

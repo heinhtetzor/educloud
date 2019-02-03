@@ -1,0 +1,104 @@
+body {
+  overflow-x: hidden;
+}
+
+.blog-post-init {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.blog-author {
+    margin-left: 15px;
+    padding: 0;
+}
+
+.blog-author span {
+    font-size: 13px;
+}
+.content-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #fafafa;
+    
+}
+
+.blog-author h5 .text {
+    color: rgb(32, 32, 32);
+}
+
+
+
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+    margin-bottom:1rem;
+ }
+ 
+ .navbar .dropdown-menu {
+   border:none;
+   margin-top: 20px;
+ } 
+ 
+ /* breakpoint and up - mega dropdown styles */
+ @media screen and (min-width: 992px) {
+   
+   /* remove the padding from the navbar so the dropdown hover state is not broken */
+ .navbar {
+   padding-top:0px;
+   padding-bottom:0px;
+ }
+ 
+ /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+ .navbar .nav-item {
+   padding:.5rem .5rem;
+   margin:0 .25rem;
+ }
+ 
+ /* makes the dropdown full width  */
+ .navbar .dropdown {position:static;}
+ 
+ .navbar .dropdown-menu {
+   width:100%;
+   left:0;
+   right:0;
+ /*  height of nav-item  */
+   top:45px;
+ }
+   
+   /* shows the dropdown menu on hover */
+ .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+   display:block!important;
+ }
+
+ 
+ }
+ .dropdown-menu.scrolled {
+        background-color: rgba(0, 0, 0, 0.8) !important; 
+  }
+ 
+
+
+
+  @media screen and (min-width: 700px) {
+    .card {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+  }
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+   
+  } 
+  .card {
+    flex: 0 0 auto;
+    width: 100% !important;
+  }
