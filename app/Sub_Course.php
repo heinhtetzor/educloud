@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sub_Course extends Model
 {
+    
+    protected $table = 'sub_courses';
+    
     protected $fillable = [
         'title', 'body', 'course_id',
     ];
