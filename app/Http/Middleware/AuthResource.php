@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use \App\Course;
+
+class AuthResource
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+    //    $check = $request->route()->parameters();
+    //    dd($check);
+        
+
+        
+    
+        return $next($request);
+    }
+}
