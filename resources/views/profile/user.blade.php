@@ -3,6 +3,7 @@
 @section('title', 'Edu Cloud - ' .Auth::user()->name)
 
 @section('content')
+<script src="{{ asset('js/follow.js') }}" defer></script>
 
 <div id="root">
     <div class="container">

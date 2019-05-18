@@ -33,12 +33,7 @@ class ProfilesController extends Controller
         }
     }
 
-    public function follow() 
-    {
-        $users = User::where('id', '!=', Auth::user()->id)->get();
-        return view('profile.user', compact('users'));
-    }
-
+    
     public function show($id) 
     {
         $user = User::where('id', $id)->first();

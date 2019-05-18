@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -25,4 +26,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show the application of itsolutionstuff.com.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    
 }

@@ -27,11 +27,12 @@ Route::group(['middleware' => 'auth', 'verified'], function () {
 
     Route::post('/wiki/store', 'PostsController@store');
 
-  
+    Route::get('users', 'FollowController@index')->name('users');
+    Route::get('user/{id}', 'FollowController@show')->name('user.view');
+    Route::post('ajaxRequest', 'FollowController@ajaxRequest')->name('ajaxRequest');
     
     Route::get('/profile', 'ProfilesController@index');
     Route::post('/profile', 'ProfilesController@upload');
-    Route::get('/users', 'ProfilesController@follow');
     Route::get('/profile/{id}', 'ProfilesController@show');
   
 

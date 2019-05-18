@@ -3,7 +3,7 @@
 @section('title', 'Edu Cloud - ' .Auth::user()->name)
 
 @section('content')
-
+<script src="{{ asset('js/follow.js') }}" defer></script>
   <div id="root-profile">
     <div class="container" style="padding-top: 70px;">
 
@@ -21,7 +21,7 @@
               </a>
             @else
               <a href="../storage/profile/default/user.png" target="_blank">
-                <img src="{{ asset('storage/profile/default/user.png') }}" class="mr-3 rounded-circle" style="width:60px;
+                <img src="{{ asset('storage/profile/default/user.png') }}" class="mr-3 rounded-circle" style="width: 150px;
                   line-height: 96px;
                   border: 4px solid #fff;
                   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.35);
@@ -37,20 +37,31 @@
 
             <div class="row">
               <div class="col-md-12">
-                <button type="button" class="btn btn-info" style="border-radius: 20px; width: 120px; padding: 5px;">Follow</button>
+                <button type="button" class="btn btn-info" style="border-radius: 20px; width: 120px; padding: 5px;" data-id="{{ $user->id }}">
+                  @if(auth()->user()->isFollowing($user))
+                      UnFollow
+                  @else
+                      Follow
+                  @endif
+                </button>
+  
+                  
+               
                 <button type="button" class="btn btn-dark" style="border-radius: 20px; width: 120px; padding: 5px;">Message</button>
+                <div>followers: {{ $user->followers()->get()->count() }} </div>
+                <div>Followings: {{ $user->followings()->get()->count() }} </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-        
-        {{-- <form action="{{ url('profile') }}" method="POST" enctype="multipart/form-data">
+  
+         <form action="{{ url('profile') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="file" name="avatar" />
             <input type="submit" value="Upload"/>
-        </form> --}}
+        </form> 
 
         <div class="row user-section" style="margin-top: 30px;">
           <div class="col-md-4">
