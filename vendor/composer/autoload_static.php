@@ -404,6 +404,7 @@ class ComposerStaticInit79a8cdadc4a55f5a3c5ab0280e2a7f76
         'App\\Http\\Controllers\\QuizsController' => __DIR__ . '/../..' . '/app/Http/Controllers/QuizsController.php',
         'App\\Http\\Controllers\\TagsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TagsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\AuthResource' => __DIR__ . '/../..' . '/app/Http/Middleware/AuthResource.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

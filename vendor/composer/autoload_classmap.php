@@ -22,6 +22,7 @@ return array(
     'App\\Http\\Controllers\\QuizsController' => $baseDir . '/app/Http/Controllers/QuizsController.php',
     'App\\Http\\Controllers\\TagsController' => $baseDir . '/app/Http/Controllers/TagsController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Middleware\\AuthResource' => $baseDir . '/app/Http/Middleware/AuthResource.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
