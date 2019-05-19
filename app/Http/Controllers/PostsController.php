@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Tags;
+use Auth;
+use App\User;
+use App\WikiComments;
 
 class PostsController extends Controller
 {
@@ -74,7 +77,10 @@ class PostsController extends Controller
     public function show($title)
     {
         $post = Post::where('title', $title)->first();
-        return view('wiki.show', compact('post'));
+        $user = Auth::user();
+        $postby = $post->id;
+        $comments = WikiComments::with('author')->where('post_id', $postby)->get();
+        return view('wiki.show', compact('post', 'user', 'comments'));
     }
 
     /**
