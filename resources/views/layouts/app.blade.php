@@ -32,7 +32,6 @@
     @include('layouts.nav')
     
     <div class="app-main-section">
-        <input id="test-input">
 
         @yield('content')
 
