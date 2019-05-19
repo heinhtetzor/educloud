@@ -24,7 +24,9 @@ function updateLocation(position) {
             long: position.coords.longitude,
         },
         success: function(success) {
-            console.log(success);
+            
+            // do nothing
+
         }
     })
 }

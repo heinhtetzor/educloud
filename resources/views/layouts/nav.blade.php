@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light fix-height-navbar">
+    <div class="container">
     <a class="navbar-brand" href="#">EduCloud</a>
     <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
         <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('tags') }}">Tags</a>
             </li>
-            
+
             @yield('navbar-addition')
         </ul>
         @endif
@@ -69,5 +70,6 @@
             @endguest
         </ul>
 
+    </div>
     </div>
 </nav>

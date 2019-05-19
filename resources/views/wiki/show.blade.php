@@ -5,7 +5,7 @@
 @section('content')
 <div id="root">
     <div class="container">
-        <h3 class="text-capatilized"> {{ str_replace('-', ' ', $post->title) }} <h3>
+        <h3 class="text-capitalize"> {{ str_replace('-', ' ', $post->title) }} </h3>
         <p> {!! $post->body !!} </p>
     </div>
 
@@ -22,11 +22,11 @@
                 <script src="{{ URL::asset('js/comment-field.js') }}"></script>
             </div>
 
-      
-    @else 
-   
-        <h1>Please log in </h1>
-    @endif
-</div>
+            @else 
+        
+                <h1>Please log in </h1>
+            @endif
+            
+        </div>
 </div>
 @endsection
