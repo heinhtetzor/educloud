@@ -62,7 +62,7 @@ class PostsController extends Controller
         $post->user_id = $user;
         $post->save();
 
-        return back();
+        return redirect('/wiki');
     }
 
     /**

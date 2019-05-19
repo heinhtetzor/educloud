@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubCoursesTable extends Migration
+class CreateLocationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSubCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_courses', function (Blueprint $table) {
+        Schema::create('location', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->text('body');
-            $table->integer('course_id');
+            $table->integer('user_id');
+            $table->decimal('latitude', 10, 7);
+            $table->decimal('longitude', 10, 7);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSubCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub__courses');
+        Schema::dropIfExists('location');
     }
 }
