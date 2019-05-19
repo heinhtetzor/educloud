@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Tags;
+use App\Posts;
 
 class TagsController extends Controller
 {

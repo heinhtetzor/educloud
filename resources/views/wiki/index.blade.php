@@ -27,7 +27,7 @@
                             @if( $post->user['photo'] )
                                 <img src="../storage/profile/{{ $post->user['photo'] }}" class="mr-3 rounded-circle" style="width:40px;">
                             @else 
-                                <img src="{{ asset('storage/profile/default/user.png') }}" class="mr-3 rounded-circle" style="width:40px;">
+                                <img src="{{ asset('../storage/profile/default/user.png') }}" class="mr-3 rounded-circle" style="width:40px;">
                             @endif
                             <div class="media-body my-auto">
                                 <a class="text-dark" href="/profile/{{$post->user_id}}">{{App\User::find($post->user_id)->name}}</a>

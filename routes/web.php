@@ -27,6 +27,8 @@ Route::group(['middleware' => 'auth', 'verified'], function () {
 
     Route::post('/wiki/store', 'PostsController@store');
 
+    Route::post('/wiki/comment', 'CommentsController@wiki');
+
     Route::get('users', 'FollowController@index')->name('users');
     Route::get('user/{id}', 'FollowController@show')->name('user.view');
     Route::post('ajaxRequest', 'FollowController@ajaxRequest')->name('ajaxRequest');
