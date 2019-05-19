@@ -5,7 +5,7 @@
 @section('content')
 <div id="root">
     <div class="container">
-        <h3> {{ str_replace('-', ' ', $post->title) }} <h3>
+        <h3 class="text-capatilized"> {{ str_replace('-', ' ', $post->title) }} <h3>
         <p> {!! $post->body !!} </p>
     </div>
 
