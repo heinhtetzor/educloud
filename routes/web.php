@@ -47,4 +47,6 @@ Route::group(['middleware' => 'auth', 'verified'], function () {
     Route::get('{title}/create', 'CoursesController@sub_index')->name('courses.create')->middleware('AuthResource');
     Route::post('courses/create', 'CoursesController@sub_create');
     Route::get('{name}', 'CoursesController@sub_show')->name('blog.show');
+
+    Route::post('/location/update', 'LocationController@update');
 });

@@ -32,9 +32,10 @@
     @include('layouts.nav')
     
     <div class="app-main-section">
+        <input id="test-input">
 
         @yield('content')
-        
+
     </div>
       
 
@@ -43,5 +44,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="{{asset('js/offcanvas.js')}}"></script>
+    <script src="{{asset('js/common.js')}}"></script>
+
+
 </body>
 </html>

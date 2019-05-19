@@ -2,6 +2,12 @@
 
 @section('title', 'Edu Cloud - wiki')
 
+@section('navbar-addition')
+    
+{{-- Addition for navbar --}}
+
+@endsection
+
 @section('content')
 
 <div id="root">

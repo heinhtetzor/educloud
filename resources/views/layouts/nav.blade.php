@@ -19,6 +19,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('communication') }}">Communication</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('tags') }}">Tags</a>
+            </li>
+            
             @yield('navbar-addition')
         </ul>
         @endif
