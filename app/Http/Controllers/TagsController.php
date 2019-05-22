@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Tags;
-use App\Posts;
+use App\Post;
 
 class TagsController extends Controller
 {
@@ -19,7 +19,8 @@ class TagsController extends Controller
     public function show($name)
     {
         $tag = Tags::where('name', $name)->first();
-        return view('tags.show', compact('tag'));
+        $posts = Post::where('tags', $name)->get();
+        return view('tags.show', compact('tag', 'posts'));
     }
 
 

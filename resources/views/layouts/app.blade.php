@@ -23,6 +23,8 @@
     <!-- Styles for Offcanvas Menu -->
     <link href="{{ asset('css/offcanvas.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -44,6 +46,7 @@
 
     <script src="{{asset('js/offcanvas.js')}}"></script>
     <script src="{{asset('js/common.js')}}"></script>
+    <script src="{{ asset('js/nav-scroll.js') }}"></script>
 
 
 </body>

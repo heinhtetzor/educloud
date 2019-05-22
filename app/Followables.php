@@ -3,21 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Followables;
 
-class Post extends Model
-{   
-   
-
+class Followables extends Model
+{
     protected $fillable = [
-         'title', 'body', 'user_id', 'tags', 'created_at', 'updated_at',
+        'user_id', 'followable_id',
     ];
 
     public function user()
-    {   
+    {
         return $this->belongsTo('App\User');
-
     }
-    
-
 }

@@ -22,7 +22,7 @@
                     <h1>THis is tag section</h1>
                     @foreach($tags as $tag)
                         <div class="badge badge-success">
-                            <a href="{{ route('tags.show', ['name' => $tag->name ]) }}/">
+                            <a href="{{ route('tags.show', ['name' => $tag->name ]) }}">
                                 {{ str_replace('-', ' ', $tag->name) }}
                             </a>
                         </div> <br>

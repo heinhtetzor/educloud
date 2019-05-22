@@ -8,6 +8,8 @@ use App\Tags;
 use Auth;
 use App\User;
 use App\WikiComments;
+use App\Followables;
+
 
 class PostsController extends Controller
 {
@@ -19,7 +21,11 @@ class PostsController extends Controller
     public function index()
     {  
         $posts = Post::with('user')->latest()->get();
+
         return view('wiki.index', ['posts' => $posts]);
+
+       
+      
     }
 
     /**

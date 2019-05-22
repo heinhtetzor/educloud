@@ -1,115 +1,160 @@
-
-/* #root {
-    margin: 30px auto;
-}
-#root-profile {
-    margin-top: 0;
-}
-p {
-     font-family: 'Roboto Slab', serif;
-}
-.heading {
-    font-family: 'Ubuntu', sans-serif;
-}
-#app {
-    padding-top: 50px;
-}
-.sidebar {
-    border-left: 2px solid #f1f1f1;
+.scrolled{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    transition: 0.3s;
 }
 
-figure img {
-    width: 100% !important;
+.postItem-stream {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 8px;
+}
+.postItem-stream:hover {
+    background: #f1f1f1;
+    cursor: pointer;
+}
+.postItem-stream a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.postItem-stream h3 {
+    font-weight: 600px;
+    font-size: 2.0vh;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Ubuntu,Cantarell,Oxygen,Roboto,Helvetica,Arial,sans-serif;
+}
+.postItem-stream a {
+    color: #000;
 }
 
-.postStream-Item {
-    border: 1px solid #f1f1f1;
-    padding: 10px;
-    margin-bottom: 20px;
+.postMeta-header h3{
+  font-size: 2.2vh;
+}
+@media screen and (max-width: 700px) {
+  .postMeta-header h3{
+    font-size: 2.4vh;
+  }
+}
+
+.postItem-activity span {
+  font-size: 2.0vh;
+}
+@media screen and (max-width: 700px) {
+  .postItem-activity span {
+    font-size: 1.9vh;
+  }
+}
+
+.badge a {
+    color: #fff !important;
+}  
+  
+
+  
+  
+  .inputFile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .inputFile + label {
+      color: white;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: inline-block;
+      padding: 5px;
+  }
+  
+  .inputFile:focus + label,
+  .inputFile + label:hover {
+      background-color: #f1f1f1;
+      color: #000;
+  }
+  .inputFile + label {
+    cursor: pointer; /* "hand" cursor */
+  }
+  
+
+
+
+
+
+  
+  .postMeta-data {
     display: flex;
     flex-direction: row;
-}
-.blogPost-image {
-    margin-right: 25px;
-}
+  }
+  .postMeta-viewer, .postMeta-data {
+      padding: 0 !important;
+  }
+  .postMeta-header {
+    padding-left: 10px;
+  }
+  .postMeta-header h3 {
+    margin-bottom: 0;
+  }
 
-
-#wrap {
-    background: #e5e5e5;
-    margin-top: 20px;
-    height: 100%;
-}
-.box {
-    background: #fff;
-    margin: 20px auto;
-    border-radius: 3px;
-    box-shadow: 0 0 4px rgba(0,0,0,.1);
-}
-
-
-.course-create {
-    background: #fff;
-   
-}
-
-.border-bottom-line {
-    border-bottom: 1px solid #ddd;
-    padding: 5px;
-}
-.each-course {
-    font-family: Arial, Helvetica, sans-serif;
+  .postItem-activity {
+    font-size: 14px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 1.5vw;
-    padding: 10px;
-    margin-right: 15px;
+  }
+  .thisPost-owner {
+    /* color:  rgb(72, 191, 131); */
+    color: #555;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .text-muted-blacker {
+    font-weight: bold;
+    color: #aaa;
+  }
+  
+  
+
+  
+
+  .category-name {
+    color: rgb(72, 191, 131);
+  }
+  
+  .category-name:hover {
+    color: #fff;
+    background: rgb(72, 191, 131);
+  }
+  
+ 
+.fz-2 {
+  font-size: 2.2vh;
 }
-.link-to-read a {
-    color: #000;
-    font-size: 22px;
-}
-.link-to-read a:hover {
-    color: #000;
-    text-decoration: none;
-}
-.wo0q {
-    border-bottom: 1px solid #ddd;
-}
-.each-course span {
-    font-size: 20px;
+@media screen and (max-width: 700px) {
+  .fz-2 {
+    font-size: 2.6vh;
+  }
 }
 
-.hide {
-    display: none;
+.cover {
+  padding: 20px;
+}
+.item-header {
+  background: #fff;
+  color: rgb(72, 191, 131);
+}
+h3.text-capatilized {
+  color: #fff;
+  font-weight: bold;
 }
 
-.nav-course {
-    padding: 10px !important;
-    border-bottom: 1px solid #ddd;
-}
-a.nav-link {
-    background: #fff !important;
-    color: #000 !important;
-}
-a.nav-link.active {
-    color: #007bff !important;
+.mainpost-container {
+  padding-top: 30px;
 }
 
-
-.board {
-    background: linear-gradient(60deg,#fff 27%,rgba(255,255,255,.7) 37%,rgba(0,139,201,.2) 74%,rgba(0,157,165,.3) 90%);
-    height: 300px;
-    margin-bottom: 20px;
-    margin: 20px auto;
-    border-radius: 3px;
-    box-shadow: 0 0 4px rgba(0,0,0,.1);
+.streamposter-info {
+  display: flex;
+  flex-direction: row;
 }
-.course-newfeeds {
-    margin-top: 40px;
-}
-
-#advertise {
-    padding: 30px;
-}
-*/

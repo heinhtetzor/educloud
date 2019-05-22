@@ -10,7 +10,7 @@ body {
 @media (max-width: 767.98px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 67px; /* Height of navbar */
+    top: 55px; /* Height of navbar */
     bottom: 0;
     width: 100%;
     padding-right: 1rem;
@@ -78,3 +78,10 @@ body {
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
+
+
+
+.fix-height-navbar {
+  min-height: 30px!important;
+  border-bottom: 1px solid #e5e5e5
+}
