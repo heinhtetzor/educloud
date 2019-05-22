@@ -154,7 +154,49 @@ h3.text-capatilized {
   padding-top: 30px;
 }
 
+
+.streamPost {
+  padding: 10px;
+  border-bottom: 1px solid #ebe9ee;
+  margin-bottom: 20px;
+}
 .streamposter-info {
   display: flex;
   flex-direction: row;
+}
+.streamposter-info h2{
+  font-size: 2.2vh;
+
+}
+@media screen and (max-width: 700px) {
+  .streamposter-info h2 {
+    font-size: 2.7vh;
+  }
+}
+.streamposter-meta {
+  line-height: 2em;
+}
+.streamposter-meta h2 {
+  margin-bottom: 0px;
+}
+.streamposter-image {
+  padding-right: 20px;
+}
+
+/* comment section */
+.media {
+  border-bottom: 1px solid #ebe9ee;
+}
+
+.mainpost-container {
+  padding-bottom: 50px;
+}
+
+.cover {
+  padding-top: 40px;
+}
+.lb-s {
+  padding: 5px !important;
+  background: #ddd;
+  color: #555;
 }

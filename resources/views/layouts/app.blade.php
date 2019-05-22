@@ -29,14 +29,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body>
+<body>        
         
-    @include('layouts.nav')
-    
     <div class="app-main-section">
+            @include('layouts.nav')
 
-        @yield('content')
+            @yield('content')
 
+       
     </div>
       
 
@@ -47,6 +47,7 @@
     <script src="{{asset('js/offcanvas.js')}}"></script>
     <script src="{{asset('js/common.js')}}"></script>
     <script src="{{ asset('js/nav-scroll.js') }}"></script>
+    <script src="{{ asset('js/replybtn.js') }}"></script>
 
 
 </body>

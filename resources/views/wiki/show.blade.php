@@ -3,7 +3,8 @@
 @section('title', 'Edu Cloud - ' . str_replace('-', ' ', $post->title))
 
 @section('content')
-<div id="root">
+<script src="{{ asset('js/follow.js') }}" defer></script>
+
     <div class="cover" style="background: rgb(72, 191, 131);">
         <div class="container text-center">
             <div class="badge item-header">Wiki</div>
@@ -16,24 +17,32 @@
             <div class="row">
                 <div class="col-md-10">
 
-                    <div class="streamPost--{{ str_random(10) }}">
+                    <div class="streamPost {{ str_random(10) }}">
                         <div class="streamposter-info">
-                            @if( $post->user['photo'] )
-                                <img src="../storage/profile/{{ $post->user['photo'] }}" width="50px" style="border-radius: 50%; border: 1px solid #ddd;">
-                            @else 
-                                <img src="{{ asset('../storage/profile/default/user.png') }}" width="50px" style="border-radius: 50%; border: 1px solid #ddd;">
-                            @endif
-                            <h2>{{ $post->user->name }}</h2>
+                            <div class="streamposter-image">
+                                @if( $post->user['photo'] )
+                                    <img src="../storage/profile/{{ $post->user['photo'] }}" width="50px" style="border-radius: 50%; border: 1px solid #ddd;">
+                                @else 
+                                    <img src="{{ asset('../storage/profile/default/user.png') }}" width="50px" style="border-radius: 50%; border: 1px solid #ddd;">
+                                @endif
+                            </div>
+                            <div class="streamposter-meta">
+                                <h2>{{ $post->user->name }}</h2>
+                                <span class="text-muted">{{ $post->created_at->diffForHumans() }}</span>
+                            </div>
                         </div>
                         <div class="fz-2">
                             <p> {!! $post->body !!} </p>
                         </div>   
                     </div>
-        
+                    
+                    <div class="badge lb-s">
+                        <i class="fas fa-pen"></i> comments 
+                    </div>
 
                     @foreach($comments as $comment)
                 
-                        <div class="media border p-3">
+                        <div class="media p-3">
                             @if( $comment->author['photo'] )
                                 <img src="../../storage/profile/{{ $comment->author['photo'] }}" class="mr-3 rounded-circle" style="width:40px;">
                             @else 
@@ -62,9 +71,22 @@
 
                 </div>
                 <div class="col-md-2">
-                    hi
+                    @if( $post->user_id != Auth::user()->id)
+                    <div class="activity9">
+                        <a href="#reply" class="btn btn-block replybtn" style="background:#e7672e; color: #fff;">Reply</a>
+                        <button class="btn btn-success btn-block action-follow" data-id="{{ $user->id }}">
+                            <strong>
+                                @if(auth()->user()->isFollowing($user))
+                                    UnFollow
+                                @else
+                                    Follow
+                                @endif
+                            </strong>
+                        </button>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
-    </div>
+ 
 @endsection
